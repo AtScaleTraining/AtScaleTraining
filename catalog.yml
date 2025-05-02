@@ -1,0 +1,6 @@
+version: 1
+unique_name: Training_Test
+object_type: catalog
+label: Training_Test
+aggressive_agg_promotion: false
+build_speculative_aggs: true
