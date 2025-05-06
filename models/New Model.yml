@@ -1,0 +1,22 @@
+unique_name: New Model
+object_type: model
+label: New Model
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+  - unique_name: m_factinternetsales_customerkey_dc
+  - unique_name: m_factinternetsales_taxamt_avg
+  - unique_name: m_factinternetsales_salesamount_avg
+  - unique_name: m_factinternetsales_orderquantity_sum
+  - unique_name: m_factinternetsales_customerkey_dce
+  - unique_name: m_factinternetsales_taxamt_sum
+relationships:
+  - unique_name: >-
+      factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level

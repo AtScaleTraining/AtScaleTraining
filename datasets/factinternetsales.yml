@@ -1,0 +1,34 @@
+unique_name: factinternetsales
+object_type: dataset
+label: factinternetsales
+columns:
+  - name: salesordernumber
+    data_type: string
+  - name: salesorderlinenumber
+    data_type: int
+  - name: sales_reasons
+    data_type: string
+  - name: productkey
+    data_type: int
+  - name: product_info
+    data_type: string
+  - name: orderdatekey
+    data_type: int
+  - name: customerkey
+    data_type: int
+  - name: orderquantity
+    data_type: int
+  - name: unitprice
+    data_type: float
+  - name: salesamount
+    data_type: float
+  - name: taxamt
+    data_type: float
+  - name: orderdate
+    data_type: string
+  - name: shipdatekey
+    data_type: int
+  - name: currencykey
+    data_type: int
+connection_id: con_atscale_public
+table: factinternetsales
