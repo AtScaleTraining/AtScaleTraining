@@ -1,0 +1,18 @@
+unique_name: Style
+object_type: dimension
+label: Style
+hierarchies:
+  - unique_name: Style_Hierarchy
+    label: Style Hierarchy
+    levels:
+      - unique_name: Style_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Style_Level
+    label: Style Level
+    contains_unique_names: false
+    dataset: factinternetsales
+    key_columns:
+      - Style
+    name_column: Style
+type: standard

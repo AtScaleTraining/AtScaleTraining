@@ -1,0 +1,18 @@
+unique_name: Weight
+object_type: dimension
+label: Weight
+hierarchies:
+  - unique_name: Weight_Hierarchy
+    label: Weight Hierarchy
+    levels:
+      - unique_name: Weight_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Weight_Level
+    label: Weight Level
+    contains_unique_names: false
+    dataset: factinternetsales
+    key_columns:
+      - Weight
+    name_column: Weight
+type: standard
