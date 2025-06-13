@@ -1,0 +1,55 @@
+unique_name: Test Model
+object_type: model
+label: Test Model
+dimensions:
+  - Tax_Rate
+  - Color
+  - Size
+  - Weight
+  - Style
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+  - unique_name: m_factinternetsales_taxamt_sum
+  - unique_name: m_factinternetsales_customerkey_dce
+  - unique_name: m_factinternetsales_salesamount_sum (1)
+  - unique_name: m_factinternetsales_taxamt_average
+  - unique_name: m_factinternetsales_orderquantity_sum
+relationships:
+  - unique_name: >-
+      factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
+  - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: dimcustomer_dimension
+      level: dimcustomer_dimension Level
+  - unique_name: factinternetsales_productkey_to_product_dim_product_dim Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: product_dim
+      level: product_dim Level
+  - unique_name: >-
+      factinternetsales_shipdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level

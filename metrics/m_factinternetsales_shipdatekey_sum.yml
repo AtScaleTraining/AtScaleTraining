@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_shipdatekey_sum
+object_type: metric
+label: Ship Date Key sum
+calculation_method: sum
+column: shipdatekey
+dataset: factinternetsales
