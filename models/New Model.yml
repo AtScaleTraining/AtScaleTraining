@@ -22,6 +22,7 @@ relationships:
       dataset: factinternetsales
       join_columns:
         - orderdatekey
+    role_play: Order {0}
     to:
       dimension: dim_date_day_dimension
       level: dim_date_day_dimension Level
@@ -33,13 +34,6 @@ relationships:
     to:
       dimension: customer_dim
       level: customer_name
-  - unique_name: dimproduct_empty_dimension
-    from:
-      dataset: dimproduct
-      join_columns: []
-    to:
-      dimension: ''
-      level: ''
   - unique_name: factinternetsales_productkey_to_product_dim_product_name
     from:
       dataset: factinternetsales
@@ -48,3 +42,14 @@ relationships:
     to:
       dimension: product_dim
       level: product_name
+  - unique_name: >-
+      factinternetsales_shipdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
