@@ -35,4 +35,16 @@ level_attributes:
     key_columns:
       - customerkey
     name_column: fullname
+relationships:
+  - unique_name: dimcustomer_gender_to_dimgender_dimension_dimgender_dimension Level
+    from:
+      dataset: dimcustomer
+      hierarchy: customer_dim Hierarchy
+      join_columns:
+        - gender
+      level: customer_name
+    to:
+      dimension: dimgender_dimension
+      level: dimgender_dimension Level
+    type: embedded
 type: standard

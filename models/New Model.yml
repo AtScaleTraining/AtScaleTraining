@@ -1,6 +1,15 @@
 unique_name: New Model
 object_type: model
 label: New Model
+aggregates:
+  - unique_name: CustomerMetrics
+    label: CustomerMetrics
+    attributes:
+      - name: customer_name
+        dimension: customer_dim
+    metrics:
+      - m_factinternetsales_orderquantity_sum
+      - m_factinternetsales_salesamount_avg
 dimensions:
   - Color
   - Style
