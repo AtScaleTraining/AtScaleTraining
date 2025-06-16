@@ -1,6 +1,0 @@
-unique_name: m_factinternetsales_currencykey_sum
-object_type: metric
-label: Currency Key sum
-calculation_method: sum
-column: currencykey
-dataset: factinternetsales

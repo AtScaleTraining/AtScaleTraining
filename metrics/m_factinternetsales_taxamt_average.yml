@@ -1,6 +1,0 @@
-unique_name: m_factinternetsales_taxamt_average
-object_type: metric
-label: Tax Amount Average
-calculation_method: average
-column: taxamt
-dataset: factinternetsales
