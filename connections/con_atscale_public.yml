@@ -1,0 +1,6 @@
+unique_name: con_atscale_public
+object_type: connection
+label: con_atscale_public
+as_connection: Connection - Internet Sales
+database: atscale
+schema: public
