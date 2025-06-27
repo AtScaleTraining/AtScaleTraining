@@ -1,6 +1,11 @@
 unique_name: CFTrainingModel
 object_type: model
 label: CFTrainingModel
+dimensions:
+  - Color
+  - Style
+  - Weight
+  - Size
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg
@@ -20,3 +25,19 @@ relationships:
     to:
       dimension: dim_date_day_dimension
       level: dim_date_day_dimension Level
+  - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: customer_dim
+      level: customer_name
+  - unique_name: factinternetsales_productkey_to_product_dim_product_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: product_dim
+      level: product_name
