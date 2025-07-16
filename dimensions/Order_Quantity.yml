@@ -1,0 +1,18 @@
+unique_name: Order_Quantity
+object_type: dimension
+label: Order Quantity
+hierarchies:
+  - unique_name: Order_Quantity_Hierarchy
+    label: Order Quantity Hierarchy
+    levels:
+      - unique_name: Order_Quantity_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Order_Quantity_Level
+    label: Order Quantity Level
+    contains_unique_names: false
+    dataset: factinternetsales
+    key_columns:
+      - orderquantity
+    name_column: orderquantity
+type: standard

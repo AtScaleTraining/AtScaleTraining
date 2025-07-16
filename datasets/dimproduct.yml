@@ -1,0 +1,20 @@
+unique_name: dimproduct
+object_type: dataset
+label: dimproduct
+columns:
+  - name: productkey
+    data_type: int
+  - name: englishproductname
+    data_type: string
+  - name: listprice
+    data_type: float
+  - name: startdate
+    data_type: string
+  - name: productsubcategorykey
+    data_type: int
+  - name: productline
+    data_type: string
+  - name: productsubcategoryname
+    data_type: string
+connection_id: con_atscale_public
+table: dimproduct
