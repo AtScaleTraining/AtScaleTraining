@@ -1,6 +1,11 @@
 unique_name: FP_Model
 object_type: model
 label: FP_Model
+dimensions:
+  - Color
+  - Size
+  - Weight
+  - Style
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg
