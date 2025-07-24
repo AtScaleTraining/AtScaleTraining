@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_unitprice_avg
+object_type: metric
+label: Unit Price-AVG
+calculation_method: average
+column: unitprice
+dataset: factinternetsales

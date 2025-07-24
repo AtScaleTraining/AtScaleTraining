@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_Tax_Rate_avg
+object_type: metric
+label: Tax Rate-AVG
+calculation_method: average
+column: Tax_Rate
+dataset: factinternetsales
