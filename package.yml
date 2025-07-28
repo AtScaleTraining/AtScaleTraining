@@ -1,6 +1,0 @@
-version: 1
-packages:
-  - version: commit:9a0f1c9c3b62c829b283db27e06197515902ae00
-    name: JD_Shared
-    url: https://github.com/jdahmer54/JD_Shared
-    branch: InstructorOnly-main
