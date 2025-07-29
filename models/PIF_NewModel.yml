@@ -1,6 +1,11 @@
 unique_name: PIF_NewModel
 object_type: model
 label: PIF_NewModel
+dimensions:
+  - Color
+  - Style
+  - Weight
+  - Size
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg

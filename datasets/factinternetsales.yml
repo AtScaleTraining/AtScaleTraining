@@ -30,5 +30,41 @@ columns:
     data_type: int
   - name: currencykey
     data_type: int
+  - name: Color
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      Product_info,
+      '(?:^|,)color:([^,]+)'
+      ) AS TEXT
+      )
+  - name: Style
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      Product_info,
+      '(?:^|,)style:([^,]+)'
+      ) AS TEXT
+      )
+  - name: Weight
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      Product_info,
+      '(?:^|,)weight:([^,]+)'
+      ) AS TEXT
+      )
+  - name: Size
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      Product_info,
+      '(?:^|,)size:([^,]+)'
+      ) AS TEXT
+      )
 connection_id: con_atscale_public
 table: factinternetsales
