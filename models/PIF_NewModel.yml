@@ -24,11 +24,3 @@ relationships:
     to:
       dimension: dim_date_day_dimension
       level: dim_date_day_dimension Level
-  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - productkey
-    to:
-      dimension: Product Dimension
-      level: Product Name
