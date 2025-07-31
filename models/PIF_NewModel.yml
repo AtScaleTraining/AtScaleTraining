@@ -14,17 +14,6 @@ metrics:
   - unique_name: m_factinternetsales_orderquantity_sum
   - unique_name: m_factinternetsales_customerkey_dc
 relationships:
-  - unique_name: >-
-      factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
-      Level
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - orderdatekey
-    role_play: Order {0}
-    to:
-      dimension: dim_date_day_dimension
-      level: dim_date_day_dimension Level
   - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name
     from:
       dataset: factinternetsales
@@ -44,3 +33,22 @@ relationships:
   - unique_name: >-
       factinternetsales_shipdatekey_to_dim_date_day_dimension_dim_date_day_dimension
       Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
+  - unique_name: >-
+      factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
