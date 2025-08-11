@@ -1,6 +1,0 @@
-version: 1
-packages:
-  - version: commit:de1f424898bc859106740dd71a393a78b82dd4e4
-    name: JD_Shared
-    url: https://github.com/jdahmer54/JD_Shared
-    branch: main
