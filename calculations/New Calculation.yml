@@ -1,0 +1,5 @@
+unique_name: New Calculation
+object_type: metric_calc
+label: New Calculation
+expression: MDX expression
+is_hidden: false

@@ -1,0 +1,6 @@
+version: 1
+unique_name: New Training
+object_type: catalog
+label: New Training
+aggressive_agg_promotion: false
+build_speculative_aggs: true
