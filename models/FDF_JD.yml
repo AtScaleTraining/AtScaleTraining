@@ -13,6 +13,7 @@ metrics:
   - unique_name: m_factinternetsales_taxamt_sum
   - unique_name: m_factinternetsales_orderquantity_sum
   - unique_name: m_factinternetsales_customerkey_dc
+  - unique_name: m_factinternetsales_unitprice_sum
 relationships:
   - unique_name: >-
       factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
