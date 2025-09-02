@@ -1,0 +1,11 @@
+unique_name: GN_Model_JD
+object_type: model
+label: GN_Model_JD
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+  - unique_name: m_factinternetsales_taxamt_avg
+  - unique_name: m_factinternetsales_customerkey_dc
+  - unique_name: m_factinternetsales_orderquantity_sum
+  - unique_name: m_factinternetsales_taxamt_sum
+  - unique_name: m_factinternetsales_salesamount_avg
+relationships: []
