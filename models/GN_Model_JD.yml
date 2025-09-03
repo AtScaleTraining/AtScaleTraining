@@ -1,6 +1,11 @@
 unique_name: GN_Model_JD
 object_type: model
 label: GN_Model_JD
+dimensions:
+  - Color
+  - Style
+  - Size
+  - Weight
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg
@@ -8,4 +13,15 @@ metrics:
   - unique_name: m_factinternetsales_orderquantity_sum
   - unique_name: m_factinternetsales_taxamt_sum
   - unique_name: m_factinternetsales_salesamount_avg
-relationships: []
+  - unique_name: m_factinternetsales_Counter_sum
+relationships:
+  - unique_name: >-
+      factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
