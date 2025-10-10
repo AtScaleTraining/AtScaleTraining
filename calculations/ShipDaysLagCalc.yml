@@ -1,0 +1,5 @@
+unique_name: ShipDaysLagCalc
+object_type: metric_calc
+label: ShipDaysLagCalc
+expression: MDX expression
+is_hidden: false

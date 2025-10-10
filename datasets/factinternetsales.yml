@@ -72,5 +72,8 @@ columns:
       '(?:^|,)weight:([^,]+)'
       ) AS TEXT
       )
+  - name: Ship lag Days
+    data_type: int
+    sql: to_date(shipdatekey::text, 'YYYYMMDD') - cast(orderdate  as date)
 connection_id: con_atscale_public
 table: factinternetsales

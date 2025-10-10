@@ -2,6 +2,19 @@ unique_name: dim_date_day_dimension
 object_type: dimension
 label: Date Dimension
 description: This is my date dimension
+calculation_groups:
+  - unique_name: dim_date_day_dimension Calculation Group
+    label: dim_date_day_dimension Calculation Group
+    calculated_members:
+      - unique_name: Current
+        template: Current
+        use_input_metric_format: true
+      - unique_name: Current vs Previous
+        template: Current vs Previous
+        use_input_metric_format: true
+      - unique_name: Previous
+        template: Previous
+        use_input_metric_format: true
 hierarchies:
   - unique_name: dim_date_day_dimension Hierarchy
     label: Year-Quarter-Month-Day Hierarchy

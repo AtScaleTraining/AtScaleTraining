@@ -1,6 +1,16 @@
 unique_name: GN_Model_JD
 object_type: model
 label: GN_Model_JD
+aggregates:
+  - unique_name: product_agg
+    label: Product Agg-JD
+    attributes:
+      - name: Product Line
+        dimension: Product Dimension
+      - name: Product Category
+        dimension: Product Dimension
+    metrics:
+      - m_factinternetsales_orderquantity_sum
 dimensions:
   - Color
   - Style
@@ -14,6 +24,8 @@ metrics:
   - unique_name: m_factinternetsales_taxamt_sum
   - unique_name: m_factinternetsales_salesamount_avg
   - unique_name: m_factinternetsales_Counter_sum
+  - unique_name: m_factinternetsales_Ship_lag_Days_avg
+  - unique_name: m_factinternetsales_Ship_lag_Days_sum
 relationships:
   - unique_name: >-
       factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
@@ -22,6 +34,34 @@ relationships:
       dataset: factinternetsales
       join_columns:
         - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
+  - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: customer_dim
+      level: customer_name
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
+  - unique_name: >-
+      factinternetsales_shipdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
     to:
       dimension: dim_date_day_dimension
       level: dim_date_day_dimension Level

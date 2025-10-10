@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_Ship_lag_Days_sum
+object_type: metric
+label: Ship Lag Days-sum
+calculation_method: sum
+column: Ship lag Days
+dataset: factinternetsales
