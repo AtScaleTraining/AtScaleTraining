@@ -1,0 +1,9 @@
+unique_name: ProgressiveDemo
+object_type: model
+label: ProgressiveDemo
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+    folder: Sales
+  - unique_name: m_factinternetsales_orderquantity_sum
+    folder: Sales
+relationships: []
