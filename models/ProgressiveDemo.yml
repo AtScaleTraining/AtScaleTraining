@@ -6,4 +6,32 @@ metrics:
     folder: Sales
   - unique_name: m_factinternetsales_orderquantity_sum
     folder: Sales
-relationships: []
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_date_dimension_day_ID
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: date_dimension
+      level: day_ID
+  - unique_name: factinternetsales_shipdatekey_to_date_dimension_day_ID
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: date_dimension
+      level: day_ID
+  - unique_name: >-
+      factinternetsales_customerkey_to_dimcustomer_dimension_dimcustomer_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: dimcustomer_dimension
+      level: dimcustomer_dimension Level
