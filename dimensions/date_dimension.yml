@@ -11,9 +11,6 @@ calculation_groups:
       - unique_name: Previous
         template: Previous
         use_input_metric_format: true
-      - unique_name: Current vs Previous
-        template: Current vs Previous
-        use_input_metric_format: true
 hierarchies:
   - unique_name: Date Dimension Hierarchy
     label: Year-Quarter-Month-Day Hierarchy
@@ -62,5 +59,6 @@ level_attributes:
     key_columns:
       - month_id
     name_column: month_name
+    sort_column: month_of_year
     time_unit: month
 type: time
