@@ -2,20 +2,17 @@ unique_name: date_dimension
 object_type: dimension
 label: Date Dimension
 calculation_groups:
-  - unique_name: time_calcs
-    label: Time Calcs
+  - unique_name: previous_current
+    label: Previous/Current
     calculated_members:
       - unique_name: Current
         template: Current
         use_input_metric_format: true
-      - unique_name: Last Year
-        template: Last Year
-        use_input_metric_format: true
-      - unique_name: Current vs Last Year
-        template: Current vs Last Year
-        use_input_metric_format: true
       - unique_name: Previous
         template: Previous
+        use_input_metric_format: true
+      - unique_name: Current vs Previous
+        template: Current vs Previous
         use_input_metric_format: true
 hierarchies:
   - unique_name: Date Dimension Hierarchy

@@ -1,0 +1,6 @@
+unique_name: CalcTest
+object_type: metric_calc
+label: CalcTest
+expression: '[Measures].[Simple Profit] * 100'
+format: percent
+is_hidden: false
