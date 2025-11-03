@@ -1,7 +1,0 @@
-unique_name: Simple Profit
-object_type: metric_calc
-label: Simple Profit
-expression: >-
-  [Measures].[m_factinternetsales_salesamount_sum] *
-  [Measures].[m_factinternetsales_orderquantity_sum]
-is_hidden: false

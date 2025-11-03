@@ -1,6 +1,0 @@
-unique_name: JDTest
-object_type: model
-label: JDTest
-metrics:
-  - unique_name: m_factinternetsales_salesamount_sum (1)
-relationships: []
