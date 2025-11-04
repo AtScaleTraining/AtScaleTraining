@@ -1,0 +1,27 @@
+unique_name: DeckersTraining
+object_type: model
+label: DeckersTraining
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_orderquantity_sum
+    folder: Sales Metrics
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_date_dimension_day_id
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: date_dimension
+      level: day_id
+  - unique_name: factinternetsales_shipdatekey_to_date_dimension_day_id
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: date_dimension
+      level: day_id
