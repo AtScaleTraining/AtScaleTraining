@@ -1,6 +1,11 @@
 unique_name: ComTraining
 object_type: model
 label: ComTraining
+dimensions:
+  - Color
+  - Style
+  - Size
+  - Weight
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg
@@ -9,4 +14,15 @@ metrics:
   - unique_name: m_factinternetsales_taxamt_sum
   - unique_name: m_factinternetsales_orderquantity_sum
   - unique_name: m_factinternetsales_customerkey_dce
-relationships: []
+  - unique_name: m_factinternetsales_Tax_Rate_avg
+  - unique_name: m_factinternetsales_Tax_Rate_sum
+  - unique_name: m_factinternetsales_Counter_sum
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_date_dimension_day_id
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: date_dimension
+      level: day_id
