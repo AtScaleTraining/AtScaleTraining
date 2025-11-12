@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_customerkey_dce
+object_type: metric
+label: Customer Key - DCE
+calculation_method: estimated count distinct
+column: customerkey
+dataset: factinternetsales

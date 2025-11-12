@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_salesamount_avg
+object_type: metric
+label: Sales Amount - Avg
+calculation_method: average
+column: salesamount
+dataset: factinternetsales
