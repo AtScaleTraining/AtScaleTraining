@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_taxamt_sum
+object_type: metric
+label: Tax Amount - Sum
+calculation_method: sum
+column: taxamt
+dataset: factinternetsales
