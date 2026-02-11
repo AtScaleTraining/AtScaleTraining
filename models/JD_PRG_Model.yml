@@ -38,3 +38,11 @@ relationships:
     to:
       dimension: Product Dimension
       level: Product Name
+  - unique_name: FACTINTERNETSALES_productkey_to_product_dimension_product_name
+    from:
+      dataset: FACTINTERNETSALES
+      join_columns:
+        - productkey
+    to:
+      dimension: product_dimension
+      level: product_name

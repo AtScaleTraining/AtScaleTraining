@@ -1,7 +1,6 @@
 version: 1
 packages:
-  - version: commit:e1022cd7c789661bdb719d470c2337db22551d03
-    name: JD_Shared
-    url: https://github.com/jdahmer54/JD_Shared
+  - version: commit:3b5c6d5f7fb906c348204ed6980583d458029d3e
+    name: JD_Share_Snow
+    url: https://github.com/jdahmer54/JD_Share_Snow
     branch: main
-
