@@ -1,0 +1,22 @@
+unique_name: DIMCUSTOMER
+object_type: dataset
+label: DIMCUSTOMER
+columns:
+  - name: customerkey
+    data_type: decimal(38,0)
+  - name: geographykey
+    data_type: decimal(38,0)
+  - name: firstname
+    data_type: string
+  - name: lastname
+    data_type: string
+  - name: gender
+    data_type: string
+  - name: datefirstpurchase
+    data_type: string
+  - name: occupation
+    data_type: string
+  - name: fullname
+    data_type: string
+connection_id: con_SE_DEMO_LIBRARY_AS_ADVENTURE
+table: DIMCUSTOMER
