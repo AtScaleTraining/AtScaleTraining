@@ -1,0 +1,6 @@
+unique_name: m_FACTINTERNETSALES_customerkey_dc
+object_type: metric
+label: Customer Key - DC
+calculation_method: count distinct
+column: customerkey
+dataset: FACTINTERNETSALES

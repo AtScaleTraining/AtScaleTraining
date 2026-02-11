@@ -1,0 +1,34 @@
+unique_name: FACTINTERNETSALES
+object_type: dataset
+label: FACTINTERNETSALES
+columns:
+  - name: salesordernumber
+    data_type: string
+  - name: salesorderlinenumber
+    data_type: decimal(38,0)
+  - name: sales_reasons
+    data_type: string
+  - name: productkey
+    data_type: decimal(38,0)
+  - name: product_info
+    data_type: string
+  - name: orderdatekey
+    data_type: decimal(38,0)
+  - name: customerkey
+    data_type: decimal(38,0)
+  - name: orderquantity
+    data_type: decimal(38,0)
+  - name: unitprice
+    data_type: double
+  - name: salesamount
+    data_type: double
+  - name: taxamt
+    data_type: double
+  - name: orderdate
+    data_type: string
+  - name: shipdatekey
+    data_type: decimal(38,0)
+  - name: currencykey
+    data_type: decimal(38,0)
+connection_id: con_SE_DEMO_LIBRARY_AS_ADVENTURE
+table: FACTINTERNETSALES
