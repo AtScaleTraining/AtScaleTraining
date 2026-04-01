@@ -1,0 +1,28 @@
+unique_name: JD-BayerTraining
+object_type: model
+label: JD-BayerTraining
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_taxamt_avg
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_salesamount_sum (1)
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_taxamt_sum
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_orderquantity_sum
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_customerkey_dc
+    folder: Sales Metrics
+  - unique_name: m_factinternetsales_customerkey_dce
+relationships:
+  - unique_name: >-
+      factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: dim_date_day_dimension
+      level: dim_date_day_dimension Level
