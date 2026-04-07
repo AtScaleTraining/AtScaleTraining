@@ -1,0 +1,6 @@
+unique_name: m_factinternetsales_sales_reasons_non-null
+object_type: metric
+label: Sales Reasons - jD
+calculation_method: count non-null
+column: sales_reasons
+dataset: factinternetsales

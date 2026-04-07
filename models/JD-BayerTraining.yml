@@ -1,6 +1,11 @@
 unique_name: JD-BayerTraining
 object_type: model
 label: JD-BayerTraining
+dimensions:
+  - Counter
+  - Color
+  - Weight
+  - Style
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
     folder: Sales Metrics
@@ -15,6 +20,7 @@ metrics:
   - unique_name: m_factinternetsales_customerkey_dc
     folder: Sales Metrics
   - unique_name: m_factinternetsales_customerkey_dce
+  - unique_name: m_factinternetsales_sales_reasons_non-null
 relationships:
   - unique_name: >-
       factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
