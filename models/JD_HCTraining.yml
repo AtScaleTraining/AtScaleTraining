@@ -1,6 +1,21 @@
 unique_name: JD_HCTraining
 object_type: model
 label: JD_HCTraining
+aggregates:
+  - unique_name: order_metrics
+    label: Order Metrics
+    attributes:
+      - name: Color_Level
+        dimension: Color
+      - name: Size_Level
+        dimension: Size
+      - name: Style_Level
+        dimension: Style
+      - name: Weight_Level
+        dimension: Weight
+    metrics:
+      - m_factinternetsales_orderquantity_sum
+      - m_factinternetsales_salesamount_sum
 dimensions:
   - Style
   - Color
