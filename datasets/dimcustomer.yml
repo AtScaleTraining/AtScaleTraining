@@ -1,0 +1,22 @@
+unique_name: dimcustomer
+object_type: dataset
+label: dimcustomer
+columns:
+  - name: customerkey
+    data_type: int
+  - name: geographykey
+    data_type: int
+  - name: firstname
+    data_type: string
+  - name: lastname
+    data_type: string
+  - name: gender
+    data_type: string
+  - name: datefirstpurchase
+    data_type: string
+  - name: occupation
+    data_type: string
+  - name: fullname
+    data_type: string
+connection_id: con_atscale_public
+table: dimcustomer
