@@ -1,0 +1,48 @@
+unique_name: dim_date_day
+object_type: dataset
+label: dim_date_day
+columns:
+  - name: year
+    data_type: int
+  - name: month_id
+    data_type: int
+  - name: month_id_expanded
+    data_type: string
+  - name: month_of_year
+    data_type: int
+  - name: month_name
+    data_type: string
+  - name: month_abbreviation
+    data_type: string
+  - name: day_id
+    data_type: int
+  - name: day_id_expanded
+    data_type: string
+  - name: day_of_month
+    data_type: int
+  - name: day_name
+    data_type: string
+  - name: quarter_id
+    data_type: int
+  - name: quarter_number
+    data_type: int
+  - name: quarter_name
+    data_type: string
+  - name: week_id
+    data_type: string
+  - name: week_name
+    data_type: string
+  - name: week_year
+    data_type: int
+  - name: week_of_year
+    data_type: int
+  - name: day_of_week_number
+    data_type: int
+  - name: day_of_week_name
+    data_type: string
+  - name: day_of_week_abbreviation
+    data_type: string
+  - name: weekly_day_name
+    data_type: string
+connection_id: con_atscale_public
+table: dim_date_day
