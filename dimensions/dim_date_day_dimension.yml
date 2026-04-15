@@ -46,25 +46,4 @@ level_attributes:
       - month_id
     name_column: month_name
     time_unit: month
-relationships:
-  - unique_name: ''
-    from:
-      dataset: ''
-      hierarchy: ''
-      join_columns: []
-      level: ''
-    to:
-      dimension: dim_date_day_dimension
-      level: ''
-    type: embedded
-  - unique_name: ''
-    from:
-      dataset: ''
-      hierarchy: ''
-      join_columns: []
-      level: ''
-    to:
-      dimension: New Dimension
-      level: ''
-    type: embedded
 type: time
