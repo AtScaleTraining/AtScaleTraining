@@ -36,3 +36,19 @@ relationships:
     to:
       dimension: day_dimension
       level: day_dimension Level
+  - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: customer_dim
+      level: customer_name
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name

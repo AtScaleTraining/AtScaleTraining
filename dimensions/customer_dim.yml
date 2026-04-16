@@ -1,0 +1,37 @@
+unique_name: customer_dim
+object_type: dimension
+label: Customer Dimension
+hierarchies:
+  - unique_name: customer_dim_hierarchy
+    label: customer_dim_hierarchy
+    levels:
+      - unique_name: customer_name
+        secondary_attributes:
+          - unique_name: occupation
+            label: Occupation
+            folder: Customer Attributes
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_unique_key: false
+            key_columns:
+              - occupation
+            name_column: occupation
+          - unique_name: datefirstpurchase
+            label: Date First Purchase
+            folder: Customer Attributes
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_unique_key: false
+            key_columns:
+              - datefirstpurchase
+            name_column: datefirstpurchase
+level_attributes:
+  - unique_name: customer_name
+    label: Customer Name
+    contains_unique_names: false
+    dataset: dimcustomer
+    is_unique_key: true
+    key_columns:
+      - customerkey
+    name_column: fullname
+type: standard
