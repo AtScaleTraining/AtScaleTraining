@@ -1,6 +1,12 @@
 unique_name: New Model
 object_type: model
 label: New Model
+dimensions:
+  - Size
+  - Style
+  - Sales_Amount
+  - Tax_Rate
+  - Counter
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg

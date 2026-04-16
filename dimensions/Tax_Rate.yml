@@ -1,0 +1,18 @@
+unique_name: Tax_Rate
+object_type: dimension
+label: Tax Rate
+hierarchies:
+  - unique_name: Tax_Rate_Hierarchy
+    label: Tax Rate Hierarchy
+    levels:
+      - unique_name: Tax_Rate_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Tax_Rate_Level
+    label: Tax Rate Level
+    contains_unique_names: false
+    dataset: factinternetsales
+    key_columns:
+      - tax_rate
+    name_column: tax_rate
+type: standard

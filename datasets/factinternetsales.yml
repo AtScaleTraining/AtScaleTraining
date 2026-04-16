@@ -30,5 +30,47 @@ columns:
     data_type: int
   - name: currencykey
     data_type: int
+  - name: counter
+    data_type: int
+    sql: '1'
+  - name: tax_rate
+    data_type: decimal
+    sql: 'round((taxamt / salesamount) :: numeric, 4)'
+  - name: color
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      product_info ,
+      '(?:^|,)color:([^,]+)'
+      ) AS TEXT
+      )
+  - name: size
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      product_info ,
+      '(?:^|,)size:([^,]+)'
+      ) AS TEXT
+      )
+  - name: weight
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      product_info ,
+      '(?:^|,)weight:([^,]+)'
+      ) AS TEXT
+      )
+  - name: style
+    data_type: string
+    sql: |-
+      CAST(
+      SUBSTRING(
+      product_info ,
+      '(?:^|,)style:([^,]+)'
+      ) AS TEXT
+      )
 connection_id: con_atscale_public
 table: factinternetsales
