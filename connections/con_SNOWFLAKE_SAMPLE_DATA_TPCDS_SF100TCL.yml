@@ -1,0 +1,6 @@
+unique_name: con_SNOWFLAKE_SAMPLE_DATA_TPCDS_SF100TCL
+object_type: connection
+label: con_SNOWFLAKE_SAMPLE_DATA_TPCDS_SF100TCL
+as_connection: Snowflake Partner
+database: SNOWFLAKE_SAMPLE_DATA
+schema: TPCDS_SF100TCL

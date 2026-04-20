@@ -1,0 +1,42 @@
+unique_name: CUSTOMER
+object_type: dataset
+label: CUSTOMER
+columns:
+  - name: C_CUSTOMER_SK
+    data_type: decimal(38,0)
+  - name: C_CUSTOMER_ID
+    data_type: string
+  - name: C_CURRENT_CDEMO_SK
+    data_type: decimal(38,0)
+  - name: C_CURRENT_HDEMO_SK
+    data_type: decimal(38,0)
+  - name: C_CURRENT_ADDR_SK
+    data_type: decimal(38,0)
+  - name: C_FIRST_SHIPTO_DATE_SK
+    data_type: decimal(38,0)
+  - name: C_FIRST_SALES_DATE_SK
+    data_type: decimal(38,0)
+  - name: C_SALUTATION
+    data_type: string
+  - name: C_FIRST_NAME
+    data_type: string
+  - name: C_LAST_NAME
+    data_type: string
+  - name: C_PREFERRED_CUST_FLAG
+    data_type: string
+  - name: C_BIRTH_DAY
+    data_type: decimal(38,0)
+  - name: C_BIRTH_MONTH
+    data_type: decimal(38,0)
+  - name: C_BIRTH_YEAR
+    data_type: decimal(38,0)
+  - name: C_BIRTH_COUNTRY
+    data_type: string
+  - name: C_LOGIN
+    data_type: string
+  - name: C_EMAIL_ADDRESS
+    data_type: string
+  - name: C_LAST_REVIEW_DATE
+    data_type: string
+connection_id: con_SNOWFLAKE_SAMPLE_DATA_TPCDS_SF100TCL
+table: CUSTOMER

@@ -1,0 +1,62 @@
+unique_name: DATE_DIM
+object_type: dataset
+label: DATE_DIM
+columns:
+  - name: D_DATE_SK
+    data_type: decimal(38,0)
+  - name: D_DATE_ID
+    data_type: string
+  - name: D_DATE
+    data_type: date
+  - name: D_MONTH_SEQ
+    data_type: decimal(38,0)
+  - name: D_WEEK_SEQ
+    data_type: decimal(38,0)
+  - name: D_QUARTER_SEQ
+    data_type: decimal(38,0)
+  - name: D_YEAR
+    data_type: decimal(38,0)
+  - name: D_DOW
+    data_type: decimal(38,0)
+  - name: D_MOY
+    data_type: decimal(38,0)
+  - name: D_DOM
+    data_type: decimal(38,0)
+  - name: D_QOY
+    data_type: decimal(38,0)
+  - name: D_FY_YEAR
+    data_type: decimal(38,0)
+  - name: D_FY_QUARTER_SEQ
+    data_type: decimal(38,0)
+  - name: D_FY_WEEK_SEQ
+    data_type: decimal(38,0)
+  - name: D_DAY_NAME
+    data_type: string
+  - name: D_QUARTER_NAME
+    data_type: string
+  - name: D_HOLIDAY
+    data_type: string
+  - name: D_WEEKEND
+    data_type: string
+  - name: D_FOLLOWING_HOLIDAY
+    data_type: string
+  - name: D_FIRST_DOM
+    data_type: decimal(38,0)
+  - name: D_LAST_DOM
+    data_type: decimal(38,0)
+  - name: D_SAME_DAY_LY
+    data_type: decimal(38,0)
+  - name: D_SAME_DAY_LQ
+    data_type: decimal(38,0)
+  - name: D_CURRENT_DAY
+    data_type: string
+  - name: D_CURRENT_WEEK
+    data_type: string
+  - name: D_CURRENT_MONTH
+    data_type: string
+  - name: D_CURRENT_QUARTER
+    data_type: string
+  - name: D_CURRENT_YEAR
+    data_type: string
+connection_id: con_SNOWFLAKE_SAMPLE_DATA_TPCDS_SF100TCL
+table: DATE_DIM

@@ -1,0 +1,19 @@
+unique_name: Sample_Snowflake
+object_type: model
+label: Sample_Snowflake
+metrics: []
+relationships:
+  - unique_name: WEB_SALES_empty_dimension
+    from:
+      dataset: WEB_SALES
+      join_columns: []
+    to:
+      dimension: ''
+      level: ''
+  - unique_name: CATALOG_SALES_empty_dimension
+    from:
+      dataset: CATALOG_SALES
+      join_columns: []
+    to:
+      dimension: ''
+      level: ''

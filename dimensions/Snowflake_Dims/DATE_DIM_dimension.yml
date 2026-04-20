@@ -1,0 +1,6 @@
+unique_name: DATE_DIM_dimension
+object_type: dimension
+label: DATE_DIM_dimension
+hierarchies: []
+level_attributes: []
+type: standard
