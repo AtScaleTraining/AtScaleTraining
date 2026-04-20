@@ -16,6 +16,21 @@ aggregates:
     metrics:
       - m_factinternetsales_orderquantity_sum
       - m_factinternetsales_salesamount_sum
+  - unique_name: jd_test_agg
+    label: JD Test Agg
+    attributes:
+      - name: occupation
+        dimension: customer_dim
+      - name: datefirstpurchase
+        dimension: customer_dim
+      - name: Product Category
+        dimension: Product Dimension
+      - name: year
+        dimension: day_dimension
+        relationships_path:
+          - factinternetsales_orderdatekey_to_day_dimension_day_dimension Level
+    metrics:
+      - m_factinternetsales_salesamount_sum
 dimensions:
   - Style
   - Color
@@ -33,6 +48,7 @@ relationships:
       dataset: factinternetsales
       join_columns:
         - orderdatekey
+    role_play: Order {0}
     to:
       dimension: day_dimension
       level: day_dimension Level
@@ -52,3 +68,20 @@ relationships:
     to:
       dimension: Product Dimension
       level: Product Name
+  - unique_name: factinternetsales_shipdatekey_to_day_dimension_day_dimension Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: day_dimension
+      level: day_dimension Level
+  - unique_name: shipping_table_shipdatekey_to_day_dimension_day_dimension Level
+    from:
+      dataset: shipping_table
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: day_dimension
+      level: day_dimension Level
