@@ -18,7 +18,7 @@ relationships:
       factinternetsales_orderdatekey_to_dim_date_day_dimension_dim_date_day_dimension
       Level
     from:
-      dataset: factinternetsales
+      dataset: dsPG_factinternetsales
       join_columns:
         - orderdatekey
     to:

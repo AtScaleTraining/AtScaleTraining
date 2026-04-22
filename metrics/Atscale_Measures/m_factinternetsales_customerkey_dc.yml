@@ -3,4 +3,4 @@ object_type: metric
 label: Customer - Distinct Count
 calculation_method: count distinct
 column: customerkey
-dataset: factinternetsales
+dataset: dsPG_factinternetsales

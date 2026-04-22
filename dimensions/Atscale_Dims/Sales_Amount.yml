@@ -11,7 +11,7 @@ level_attributes:
   - unique_name: Sales_Amount_Level
     label: Sales Amount Level
     contains_unique_names: false
-    dataset: factinternetsales
+    dataset: dsPG_factinternetsales
     key_columns:
       - salesamount
     name_column: salesamount

@@ -11,7 +11,7 @@ level_attributes:
   - unique_name: Counter_Level
     label: Counter Level
     contains_unique_names: false
-    dataset: factinternetsales
+    dataset: dsPG_factinternetsales
     key_columns:
       - counter
     name_column: counter

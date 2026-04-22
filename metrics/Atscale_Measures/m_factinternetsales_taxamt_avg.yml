@@ -3,4 +3,4 @@ object_type: metric
 label: Tax Amount - average
 calculation_method: average
 column: taxamt
-dataset: factinternetsales
+dataset: dsPG_factinternetsales

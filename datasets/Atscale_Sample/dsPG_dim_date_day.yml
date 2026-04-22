@@ -1,4 +1,4 @@
-unique_name: dim_date_day
+unique_name: dsPG_dim_date_day
 object_type: dataset
 label: dim_date_day
 columns:

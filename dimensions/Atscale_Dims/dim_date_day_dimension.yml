@@ -13,7 +13,7 @@ level_attributes:
   - unique_name: dim_date_day_dimension Level
     label: Day ID
     contains_unique_names: false
-    dataset: dim_date_day
+    dataset: dsPG_dim_date_day
     is_unique_key: false
     key_columns:
       - day_id
@@ -22,7 +22,7 @@ level_attributes:
   - unique_name: year
     label: Year
     contains_unique_names: false
-    dataset: dim_date_day
+    dataset: dsPG_dim_date_day
     is_unique_key: false
     key_columns:
       - year
@@ -31,7 +31,7 @@ level_attributes:
   - unique_name: quarter_id
     label: Quarter
     contains_unique_names: false
-    dataset: dim_date_day
+    dataset: dsPG_dim_date_day
     is_unique_key: false
     key_columns:
       - quarter_id
@@ -40,7 +40,7 @@ level_attributes:
   - unique_name: month_id
     label: Month Name
     contains_unique_names: false
-    dataset: dim_date_day
+    dataset: dsPG_dim_date_day
     is_unique_key: false
     key_columns:
       - month_id

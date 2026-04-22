@@ -3,4 +3,4 @@ object_type: metric
 label: Order Quantity - Sum
 calculation_method: sum
 column: orderquantity
-dataset: factinternetsales
+dataset: dsPG_factinternetsales

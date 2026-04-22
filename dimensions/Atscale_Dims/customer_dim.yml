@@ -1,0 +1,18 @@
+unique_name: customer_dim
+object_type: dimension
+label: Customer Dimension
+hierarchies:
+  - unique_name: customer_dim_hierarchy
+    label: customer_dim Hierarchy
+    levels:
+      - unique_name: customer_name
+level_attributes:
+  - unique_name: customer_name
+    label: Customer Name
+    contains_unique_names: false
+    dataset: dsPG_dimcustomer
+    is_unique_key: true
+    key_columns:
+      - customerkey
+    name_column: fullname
+type: standard

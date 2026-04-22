@@ -3,4 +3,4 @@ object_type: metric
 label: Sales Amount - sum
 calculation_method: sum
 column: salesamount
-dataset: factinternetsales
+dataset: dsPG_factinternetsales
