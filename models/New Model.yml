@@ -32,3 +32,11 @@ relationships:
     to:
       dimension: customer_dim
       level: customer_name
+  - unique_name: dsPG_factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: dsPG_factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
