@@ -6,6 +6,23 @@ hierarchies:
     label: customer_dim Hierarchy
     levels:
       - unique_name: customer_name
+        secondary_attributes:
+          - unique_name: occupation
+            label: Occupation
+            contains_unique_names: false
+            dataset: dsPG_dimcustomer
+            is_unique_key: false
+            key_columns:
+              - occupation
+            name_column: occupation
+          - unique_name: datefirstpurchase
+            label: Date First Purchase
+            contains_unique_names: false
+            dataset: dsPG_dimcustomer
+            is_unique_key: false
+            key_columns:
+              - datefirstpurchase
+            name_column: datefirstpurchase
 level_attributes:
   - unique_name: customer_name
     label: Customer Name

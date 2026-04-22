@@ -24,3 +24,11 @@ relationships:
     to:
       dimension: dim_date_day_dimension
       level: dim_date_day_dimension Level
+  - unique_name: dsPG_factinternetsales_customerkey_to_customer_dim_customer_name
+    from:
+      dataset: dsPG_factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: customer_dim
+      level: customer_name
