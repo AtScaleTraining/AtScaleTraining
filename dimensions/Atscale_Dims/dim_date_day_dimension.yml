@@ -9,6 +9,10 @@ hierarchies:
       - unique_name: quarter_id
       - unique_name: month_id
       - unique_name: dim_date_day_dimension Level
+  - unique_name: Y_W_D_H
+    label: Y-W-D Hierarchy
+    levels:
+      - unique_name: day_dimension_Level_1
 level_attributes:
   - unique_name: dim_date_day_dimension Level
     label: Day ID
@@ -46,4 +50,13 @@ level_attributes:
       - month_id
     name_column: month_name
     time_unit: month
+  - unique_name: day_dimension_Level_1
+    label: Day2
+    contains_unique_names: false
+    dataset: dsPG_dim_date_day
+    is_unique_key: false
+    key_columns:
+      - day_id
+    name_column: day_id_expanded
+    time_unit: day
 type: time
