@@ -31,7 +31,7 @@ relationships:
       join_columns:
         - customerkey
     to:
-      dimension: customer_dim
+      dimension: gender_dimension
       level: customer_name
   - unique_name: dsPG_factinternetsales_productkey_to_Product Dimension_Product Name
     from:

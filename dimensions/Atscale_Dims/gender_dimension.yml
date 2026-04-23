@@ -1,6 +1,6 @@
-unique_name: customer_dim
+unique_name: gender_dimension
 object_type: dimension
-label: Customer Dimension
+label: Gender Dimension
 hierarchies:
   - unique_name: customer_dim_hierarchy
     label: customer_dim Hierarchy
@@ -9,18 +9,18 @@ hierarchies:
         secondary_attributes:
           - unique_name: occupation
             label: Occupation
-            folder: Customer Attributes
             contains_unique_names: false
             dataset: dsPG_dimcustomer
+            folder: Customer Attributes
             is_unique_key: false
             key_columns:
               - occupation
             name_column: occupation
           - unique_name: datefirstpurchase
             label: Date First Purchase
-            folder: Customer Attributes
             contains_unique_names: false
             dataset: dsPG_dimcustomer
+            folder: Customer Attributes
             is_unique_key: false
             key_columns:
               - datefirstpurchase
@@ -34,4 +34,16 @@ level_attributes:
     key_columns:
       - customerkey
     name_column: fullname
+relationships:
+  - unique_name: dsPG_dimcustomer_gender_to_dimgender_dimension_gender_name
+    from:
+      dataset: dsPG_dimcustomer
+      hierarchy: customer_dim_hierarchy
+      join_columns:
+        - gender
+      level: customer_name
+    to:
+      dimension: dimgender_dimension
+      level: gender_name
+    type: embedded
 type: standard
