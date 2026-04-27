@@ -1,0 +1,10 @@
+unique_name: MetricSelectionTest
+object_type: metric_calc
+label: MetricSelectionTest
+expression: >-
+  CASE [day_dimension].[day_dimension
+  Hierarchy].currentMember.HIERARCHY_UNIQUE_NAME
+        WHEN "Ship day_dimension Hierarchy" THEN [Measures].[m_factinternetsales_orderquantity_sum]
+        WHEN "Order day_dimension Hierarchy" THEN [Measures].[m_factinternetsales_salesamount_sum]
+        ELSE 0
+      END

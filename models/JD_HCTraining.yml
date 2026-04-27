@@ -42,6 +42,8 @@ metrics:
   - unique_name: m_factinternetsales_customerkey_dc
   - unique_name: m_factinternetsales_taxamt_sum
   - unique_name: m_factinternetsales_orderquantity_sum
+  - unique_name: MetricSelectionTest
+  - unique_name: New Calculation
 relationships:
   - unique_name: factinternetsales_orderdatekey_to_day_dimension_day_dimension Level
     from:
