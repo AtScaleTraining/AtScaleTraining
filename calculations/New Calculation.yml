@@ -1,4 +1,0 @@
-unique_name: New Calculation
-object_type: metric_calc
-label: New Calculation
-expression: '[day_dimension].[day_dimension Hierarchy].CurrentMember.HIERARCHY_UNIQUE_NAME'
