@@ -1,7 +1,11 @@
 unique_name: JD_Model_Deckers
 object_type: model
 label: JD_Model_Deckers
-dimensions: []
+dimensions:
+  - Color
+  - Weight
+  - Size
+  - Style
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg
@@ -18,3 +22,19 @@ relationships:
     to:
       dimension: date_dimension
       level: day_id_level
+  - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: customer_dim
+      level: customer_name
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
