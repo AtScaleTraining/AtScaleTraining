@@ -1,0 +1,24 @@
+unique_name: JD_HDTraningModel
+object_type: model
+label: JD_HDTraningModel
+dimensions:
+  - Color
+  - Size
+  - Weight
+  - Style
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+  - unique_name: m_factinternetsales_taxamt_avg
+  - unique_name: m_factinternetsales_salesamount_avg
+  - unique_name: m_factinternetsales_taxamt_sum
+  - unique_name: m_factinternetsales_orderquantity_sum
+  - unique_name: m_factinternetsales_Counter_sum
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_date_dimension_day_id_level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: date_dimension
+      level: day_id_level
