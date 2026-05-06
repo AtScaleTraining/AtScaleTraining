@@ -1,6 +1,23 @@
 unique_name: JD_HDTraningModel
 object_type: model
 label: JD_HDTraningModel
+aggregates:
+  - unique_name: CustomerOrder
+    label: CustomerOrder
+    attributes:
+      - name: occupation
+        dimension: dimcustomer_dimension Hierarchy
+      - name: customer_name
+        dimension: dimcustomer_dimension Hierarchy
+      - name: gendername
+        dimension: gender_dimension
+      - name: year2
+        dimension: date_dimension
+        relationships_path:
+          - factinternetsales_orderdatekey_to_date_dimension_day_id_level
+    metrics:
+      - m_factinternetsales_Counter_sum
+      - m_factinternetsales_orderquantity_sum
 dimensions:
   - Color
   - Size
@@ -19,6 +36,50 @@ relationships:
       dataset: factinternetsales
       join_columns:
         - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: date_dimension
+      level: day_id_level
+  - unique_name: >-
+      factinternetsales_customerkey_to_dimcustomer_dimension
+      Hierarchy_customer_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: dimcustomer_dimension Hierarchy
+      level: customer_name
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
+  - unique_name: factinternetsales_shipdatekey_to_date_dimension_day_id_level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: date_dimension
+      level: day_id_level
+  - unique_name: shipping_table_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: shipping_table
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
+  - unique_name: shipping_table_shipdatekey_to_date_dimension_day_id_level
+    from:
+      dataset: shipping_table
+      join_columns:
+        - shipdatekey
     to:
       dimension: date_dimension
       level: day_id_level

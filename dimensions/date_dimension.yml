@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: year_quarter_month_day
     label: Year-Quarter-Month-Day Hierarchy
     levels:
-      - unique_name: year
+      - unique_name: year2
       - unique_name: quarter
       - unique_name: month_name
       - unique_name: day_id_level
@@ -19,7 +19,7 @@ level_attributes:
       - day_id
     name_column: day_id_expanded
     time_unit: day
-  - unique_name: year
+  - unique_name: year2
     label: Year
     contains_unique_names: false
     dataset: dim_date_day
