@@ -1,6 +1,0 @@
-unique_name: m_factinternetsales_Counter_sum
-object_type: metric
-label: Counter-sum
-calculation_method: sum
-column: Counter
-dataset: factinternetsales
