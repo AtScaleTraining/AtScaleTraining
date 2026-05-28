@@ -1,0 +1,20 @@
+unique_name: JD_CA_Training
+object_type: model
+label: JD_CA_Training
+metrics:
+  - unique_name: m_factinternetsales_salesamount_sum
+  - unique_name: m_factinternetsales_taxamt_avg
+  - unique_name: m_factinternetsales_salesamount_avg
+  - unique_name: m_factinternetsales_taxamt_sum
+  - unique_name: m_factinternetsales_orderquantity_sum
+  - unique_name: m_factinternetsales_customerkey_dc
+  - unique_name: m_factinternetsales_customerkey_dce
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_date_dimension_date_dimension_level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: date_dimension
+      level: date_dimension_level
