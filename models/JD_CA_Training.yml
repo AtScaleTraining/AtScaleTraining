@@ -1,6 +1,23 @@
 unique_name: JD_CA_Training
 object_type: model
 label: JD_CA_Training
+aggregates:
+  - unique_name: customerproduct
+    label: Customer Product
+    attributes:
+      - name: Product Line
+        dimension: Product Dimension
+      - name: customer_name
+        dimension: customer_dim
+    metrics:
+      - m_factinternetsales_orderquantity_sum
+      - m_factinternetsales_salesamount_sum
+dimensions:
+  - Color
+  - Size
+  - Weight
+  - Style
+  - Currency_Key
 metrics:
   - unique_name: m_factinternetsales_salesamount_sum
   - unique_name: m_factinternetsales_taxamt_avg
@@ -15,6 +32,49 @@ relationships:
       dataset: factinternetsales
       join_columns:
         - orderdatekey
+    role_play: Order {0}
     to:
       dimension: date_dimension
       level: date_dimension_level
+  - unique_name: factinternetsales_customerkey_to_customer_dim_customer_name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: customer_dim
+      level: customer_name
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
+  - unique_name: factinternetsales_shipdatekey_to_date_dimension_date_dimension_level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: date_dimension
+      level: date_dimension_level
+  - unique_name: shipping_table_shipdatekey_to_date_dimension_date_dimension_level
+    from:
+      dataset: shipping_table
+      join_columns:
+        - shipdatekey
+    role_play: Shipping Date {0}
+    to:
+      dimension: date_dimension
+      level: date_dimension_level
+  - unique_name: shipping_table_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: shipping_table
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name

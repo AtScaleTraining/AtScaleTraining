@@ -1,0 +1,14 @@
+unique_name: shipping_table
+object_type: dataset
+label: Shipping Table (QDS)
+columns:
+  - name: productkey
+    data_type: int
+  - name: orderquantity
+    data_type: int
+  - name: shipdatekey
+    data_type: int
+connection_id: con_atscale_public
+sql: |-
+  select productkey, orderquantity, shipdatekey from
+  public.factinternetsales

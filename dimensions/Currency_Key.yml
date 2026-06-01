@@ -1,0 +1,18 @@
+unique_name: Currency_Key
+object_type: dimension
+label: Currency Key
+hierarchies:
+  - unique_name: Currency_Key_Hierarchy
+    label: Currency Key Hierarchy
+    levels:
+      - unique_name: Currency_Key_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Currency_Key_Level
+    label: Currency Key Level
+    contains_unique_names: false
+    dataset: factinternetsales
+    key_columns:
+      - currencykey
+    name_column: currencykey
+type: standard
